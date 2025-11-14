@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#while ve if
+A=1 
+while ((A<=10));do
+	if ((A==10));then 
+		echo "Hi"
+	fi
+	echo "Best School"
+	A=$((A+1))
+done
