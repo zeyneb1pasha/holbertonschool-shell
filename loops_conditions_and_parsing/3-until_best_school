@@ -3,5 +3,5 @@
 A=1
 until [ $A -gt 10 ]; do
 	echo "Best School"
-	$(( A+1 ))
+	(( A++ ))
 done
