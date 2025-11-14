@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #until islenir
 A=1
-until [A -gt 10]; do
+until [ $A -gt 10 ]; do
 	echo "Best School"
+	$(( A+1 ))
 done
