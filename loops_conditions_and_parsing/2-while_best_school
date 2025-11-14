@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #while dovru ile
 A=1
-while [$A -le 10 ]; do
+while [ $A -le 10 ]; do
 	echo "Best School"
 	A=$((A++))
 done
