@@ -2,7 +2,7 @@
 #switch-case islenir
 A=1
 while ((A<=20));do
-	case A in
+	case $A in
 		4)
 			echo "4 bad luck from China"
 			;;
@@ -13,7 +13,8 @@ while ((A<=20));do
 			echo "bad luck from Italy"
 			;;
 		*)
-			echo "A"
+			echo $A
 			;;
 	esac
+	A=$((A+1))
 done
