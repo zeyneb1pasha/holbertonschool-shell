@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #for isledirem
-for (({1..10})); do
+for ((i=1:i<=10:i+=1)); do
 	echo "Best School"
 done
