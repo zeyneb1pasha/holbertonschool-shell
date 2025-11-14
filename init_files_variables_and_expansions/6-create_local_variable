@@ -1,4 +1,2 @@
 #!/bin/bash
-bestschool() {
- local BEST="School";
- }
+best() { local BEST="School"; } && best
