@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#switch-case islenir
+A=1
+while ((A<=20));do
+	case A in
+		4)
+			echo "4 bad luck from China"
+			;;
+		9)
+			echo "bad luck from Japan"
+			;;
+		17)
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "A"
+			;;
+	esac
+done
