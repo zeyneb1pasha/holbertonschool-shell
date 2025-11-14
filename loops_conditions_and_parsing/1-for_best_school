@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+#for isledirem
+for i in {1..10}; do
+	echo "$1 Best School"
+done
