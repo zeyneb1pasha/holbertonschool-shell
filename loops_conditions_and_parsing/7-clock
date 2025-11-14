@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#saat ve deqiqe
+saat=0
+while ((saat<=12));do
+	echo "Hour: $saat"
+	deqiqe=1
+	while ((deqiqe<=60));do
+		echo $deqiqe
+		deqiqe=$((deqiqe+1))
+	done
+	saat=$((saat+1))
+done
