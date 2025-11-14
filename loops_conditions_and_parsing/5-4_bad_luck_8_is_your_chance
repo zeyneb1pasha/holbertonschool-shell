@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#while if elif else islenir
+A=1
+while ((A<=10));do
+	if ((A==4));then
+		echo "bad luck"
+	elif ((A==8));then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	A=$((A+1))
+done
