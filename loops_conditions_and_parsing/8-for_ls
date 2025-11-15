@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 l="list"
 n="newlist"
->"$l"
->"$n"
+: >"$l"
+: >"$n"
 
 ls -1 >> "$l"
 
