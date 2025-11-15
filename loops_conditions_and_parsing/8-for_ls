@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+l="list"
+n="newlist"
+>"$l"
+>"$n"
+
+ls -1 >> "$l"
+
+for i in $(cat "$l"); do
+    echo "$i" | cut -d "-" -f 2 >> "$n"
+done
+
+cat "$n"
+
