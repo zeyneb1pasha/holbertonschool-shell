@@ -2,7 +2,7 @@
 # Display filenames after first dash
 for file in *; do
     if [ -e "$file" ]; then
-        if [ "$file" == *-* ]]; then
+        if [[ "$file" == *-* ]]; then
             echo "${file#*-}"
         else
             echo "$file"
