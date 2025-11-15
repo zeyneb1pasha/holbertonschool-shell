@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-#for ile directory
-l="list"
+#salam
 n="newlist"
-: >"$l"
-: >"$n"
-
-ls -1 >> "$l"
-
-for i in $(cat "$l"); do
-    echo "$i" | cut -d "-" -f 2 >> "$n"
+: > "$n"
+mapfile -t files < list
+for f in "${files[@]}"; do
+    echo "$f" | cut -d "-" -f 2 >> "$n"
 done
 
 cat "$n"
