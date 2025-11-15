@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 #school
 s="school"
-if [ -d "$s" ]; then
-	echo "school exists but it a directory"
-fi
-if [ -f "$s" ];then 
+if [ -e "$s" ];then 
 	echo "school file exists"
 	if [ -s "$s" ]; then 
 		echo "school file is not empty"
 	else 
 		echo "school file is empty"
 	fi
-	if [ -r "$s" ]; then
+	if [ -f "$s" ]; then
 		echo "school is a regular file"
 	fi
 else 
