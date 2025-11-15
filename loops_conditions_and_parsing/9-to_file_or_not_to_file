@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #school
 s="school"
+if [ -d "$s" ]; then
+	echo "school exists but it’s a directory"
+fi
 if [ -f "$s" ];then 
 	echo "school file exists"
 	if [ -s "$s" ]; then 
@@ -14,3 +17,4 @@ if [ -f "$s" ];then
 else 
 	echo "school file does not exist"
 fi
+
