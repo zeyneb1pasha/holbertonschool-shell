@@ -2,7 +2,7 @@
 #school
 s="school"
 if [ -d "$s" ]; then
-	echo "school exists but it’s a directory"
+	echo "school exists but it a directory"
 fi
 if [ -f "$s" ];then 
 	echo "school file exists"
