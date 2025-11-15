@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#fizzbuzz
+a=0
+while (( a<=99 ));do
+	a=$((a+1))
+	if (( a%15==0 ));then
+		echo "FizzBuzz"
+	elif (( a%3==0 ));then
+		echo "Fizz"
+	elif (( a%5==0 ));then
+		echo "Buzz"
+	else
+		echo "$a"
+	fi
+done
