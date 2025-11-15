@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-#salam
-n="newlist"
-: > "$n"
-mapfile -t files < list
-for f in "${files[@]}"; do
-    echo "$f" | cut -d "-" -f 2 >> "$n"
+# Display filenames after first dash
+for file in *; do
+    if [ -e "$file" ]; then
+        if [ "$file" == *-* ]]; then
+            echo "${file#*-}"
+        else
+            echo "$file"
+        fi
+    fi
 done
-
-cat "$n"
-
