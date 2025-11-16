@@ -3,8 +3,9 @@
 while true;do
 	echo "To infinity and beyond"
 	sleep 2
-	trap "sigterm" SIGTERM
+	trap "sigterm=1" SIGTERM
 	if [ "$sigterm" -eq 1 ]; then
 		echo "I am invincible!!!"
 	fi
+	sleep 1
 done
