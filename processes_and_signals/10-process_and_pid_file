@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#i love u
+sigterm=o
+sigint=0
+sigquit=0
+echo $$ > /var/run/myscript.pid
+while true; do
+	echo "To infinity and beyond"
+	trap "sigterm=1" SIGTERM
+	trap "sigint=1" SIGINT
+	trap "sigquit=1" SIGQUIT
+	if [ $sigterm -eq 1 ];then
+		echo "I hate the kill command"
+	elif [ $sigint -eq 1 ];then
+		echo "Y U no love me?!"
+	elif [ $sigterm -eq 1 ] && [ $sigquit -eq 1 ];then
+		rm /var/run/myscript.pid && kill $$
+	fi
+done
