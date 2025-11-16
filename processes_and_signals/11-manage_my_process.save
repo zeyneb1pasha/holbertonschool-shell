@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#axot yoxdu 
+#axot yoxdu ))
 PID_FILE="/var/run/my_process.pid"
 DAEMON="./manage_my_process"
 
