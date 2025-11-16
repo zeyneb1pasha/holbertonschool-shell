@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#ad ve pid
+pgrep -l bash
