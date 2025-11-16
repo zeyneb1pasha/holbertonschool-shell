@@ -9,15 +9,14 @@ case "$1" in
         echo $! > "$PID_FILE"
         echo "manage_my_process started"
         ;;
-    stop)
-        if [ -f "$PID_FILE" ]; then
-            kill "$(cat $PID_FILE)"
-            rm "$PID_FILE"
-            echo "manage_my_process stopped"
-        else
-            echo "manage_my_process is not running"
-        fi
-        ;;
+   stop)
+    	if [ -f "$PID_FILE" ]; then
+        	kill "$(cat $PID_FILE)" 2>/dev/null
+        	rm "$PID_FILE"
+   	fi
+   	 echo "manage_my_process stopped"
+	;;
+
     restart)
         if [ -f "$PID_FILE" ]; then
             kill "$(cat $PID_FILE)"
