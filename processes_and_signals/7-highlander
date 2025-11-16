@@ -6,7 +6,7 @@ while true;do
 	sleep 2
 	trap "sigterm=1" SIGTERM
 	if [ "$sigterm" -eq 1 ]; then
-		echo "I am invincible!!!"
+		echo "Killed"
 	fi
 	sleep 1
 done
