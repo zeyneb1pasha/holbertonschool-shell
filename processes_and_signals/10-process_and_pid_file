@@ -2,7 +2,7 @@
 #i love u
 PID_FILE="/var/run/myscript.pid"
 echo $$ > "$PID_FILE"
-sigterm=o
+sigterm=0
 sigint=0
 sigquit=0
 trap "sigterm=1" SIGTERM
@@ -10,11 +10,15 @@ trap "sigint=1" SIGINT
 trap "sigquit=1" SIGQUIT
 while true; do
 	echo "To infinity and beyond"
+	sleep 1
 	if [ $sigterm -eq 1 ];then
  		echo "I hate the kill command"
+		exit 0
 	elif [ $sigint -eq 1 ];then
 		echo "Y U no love me?!"
+		sigint=0
 	elif [ $sigterm -eq 1 ] && [ $sigquit -eq 1 ];then
-		rm -r /var/run/myscript.pid && kill $$
+		rm -f "$PID_FILE" 
+		exit 0
 	fi
 done
