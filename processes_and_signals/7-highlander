@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #kill the ps
+sigterm=0
 while true;do
 	echo "To infinity and beyond"
 	sleep 2
