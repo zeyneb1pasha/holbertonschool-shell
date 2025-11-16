@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 #kill 7
 pid=$(pgrep -f 7-highlander)
-
 if [ -n "$pid" ]; then
-    kill "$pid"
-else
-    echo "./7-highlander is not running"
+    kill -9 "$pid"  
 fi
