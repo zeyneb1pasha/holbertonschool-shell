@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #pkill
+ps waux | grep '4-to_infinity_and_beyond' | wc -l | head -c 1
 pkill -f 4-to_infinity_and_beyond
