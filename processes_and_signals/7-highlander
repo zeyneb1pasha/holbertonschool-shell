@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#kill the ps
+while true;do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "sigterm" SIGTERM
+	if [ $sigterm -eq 1]; then
+		echo "I am invincible!!!"
+	fi
+done
